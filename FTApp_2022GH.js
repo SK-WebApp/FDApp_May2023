@@ -289,17 +289,21 @@ var ModComContainer = document.getElementById("mod-comment");
 /* Following two functions, clear selected or all carried variables */
 
 	function clearCarried() { 
-		alert ("should lear carriedUI4a, 4b, 5 and 6")
-		if (carriedDFValue == "Food" || carriedDFValue == "Drink") {
+		alert ("should clear carriedUI4a, 4b, 5 and 6")
+// 		if (carriedDFValue == "Food" || carriedDFValue == "Drink") {
 			var carriedUI4a = localStorage.removeItem('storedUI4a');
+			alert (carriedUI4a)
 			console.log(carriedUI4a)
 			var carriedUI4b = localStorage.removeItem('storedUI4b');
+			alert (carriedUI4a)
 			console.log(carriedUI4b)
 			var carriedUI5 = localStorage.removeItem('storedUI5');
+			alert (carriedUI5)
 			console.log(carriedUI5)
 			var carriedUI6 = localStorage.removeItem('storedUI6');
+			alert (carriedUI6)
 			console.log(carriedUI6)	
-		}		
+// 		}		
 	}
 	
 	function clearAllstored() {
@@ -777,6 +781,7 @@ function currentLevelDes () {
 		var FlevelNumber = carriedUI3.match(/\d+/); /* assuming carriedUI is cleared */
 		
 		if (carriedDFValue == "Food") {
+			alert ("MSize-Food")
 			if (FlevelNumber[0] == "5") {
 				document.location.href = "index_FTApp_MSize.html";
 			}	
@@ -785,6 +790,7 @@ function currentLevelDes () {
 			}			
 		}	
 		if (carriedDFValue = "Transitional" && carriedUI6 != null) {
+			alert ("MSize-Transitional")
 			var TlevelNumber = carriedUI6.match(/\d+/);
 			if (TlevelNumber[0] == "5") {
 				document.location.href = "index_FTApp_MSize.html";
@@ -801,6 +807,7 @@ function currentLevelDes () {
 		var FlevelNumber = carriedUI3.match(/\d+/);
 
 		if (carriedDFValue == "Food") {
+			alert ("ForkPress-Food")
 			if (FlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MFP4.html";	
 			}
@@ -815,6 +822,7 @@ function currentLevelDes () {
 			}			
 		}	
 		if (carriedDFValue == "Transitional" && carriedUI6 != null) {
+			alert ("ForkPress-Transitional")
 			var TlevelNumber = carriedUI6.match(/\d+/); /* assuming carriedUI6 is cleared from before*/
 			if (TlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MFP4.html";	
@@ -837,13 +845,13 @@ function currentLevelDes () {
 		var FlevelNumber = carriedUI3.match(/\d+/);
 
 		if (carriedDFValue == "Drink" && carriedUI2 != "Do Not Know") {
-// 			alert ("Selection - Drink")
+			alert ("SpoonTilt- Drink")
 			if (DlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MST4.html";	
 			}		
 		}		
 		if (carriedDFValue == "Food" && carriedUI3 != "Do Not Know") {
-// 			alert ("Selection - Food")
+			alert ("SpoonTilt - Food")
 			if (FlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MST3.html";	
 			}
@@ -857,14 +865,14 @@ function currentLevelDes () {
 		
 		if (carriedDFValue == "Transitional" && carriedUI5 == "drink") {
 			var TlevelNumber = carriedUI6.match(/\d+/);
-// 			alert ("Selection - Transitional-drink")
+			alert ("SpoonTilt-Transitional-drink")
 			if (TlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MST4.html";	
 			}				 
 		}
 		if (carriedDFValue == "Transitional" && carriedUI5 == "food") {	
 			var TlevelNumber = carriedUI6.match(/\d+/); 
-// 			alert ("Selection: Transitional-food")
+			alert ("SpoonTilt-Transitional-food")
 			if (TlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MST3.html";	
 			}			
@@ -883,11 +891,13 @@ function currentLevelDes () {
 		var FlevelNumber = carriedUI3.match(/\d+/);	
 	
  		if (carriedDFValue == "Drink" && carriedUI2 != "Do Not Know"){
+ 			alert ("ForkDrip-Drink")
 			if (DlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MFD.html";	
 			}
  		}
  		if (carriedDFValue == "Food" && carriedUI3 != "Do Not Know"){
+ 			alert ("ForkDrip-Food")
 			if (FlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MFD3.html";	
 			}			
@@ -896,6 +906,7 @@ function currentLevelDes () {
 			}	
  		}				
 		if (carriedDFValue == "Transitional" && carriedUI6 != null){
+ 			alert ("ForkDrip-Transitional")
 			var TlevelNumber = carriedUI6.match(/\d+/);
 			if (TlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MFD3.html";	
