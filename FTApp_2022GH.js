@@ -289,6 +289,7 @@ var ModComContainer = document.getElementById("mod-comment");
 /* Following two functions, clear selected or all carried variables */
 
 	function clearCarried() { 
+		alert ("should lear carriedUI4a, 4b, 5 and 6")
 		if (carriedDFValue == "Food" || carriedDFValue == "Drink") {
 			var carriedUI4a = localStorage.removeItem('storedUI4a');
 			console.log(carriedUI4a)
@@ -756,7 +757,7 @@ function currentLevelDes () {
 			}							
 		}
 	
-		if (carriedDFValue =="Transitional") {	 
+		if (carriedDFValue =="Transitional" carriedUI6 != null) {	 
 			var TlevelNumber = carriedUI6.match(/\d+/);
 			if (TlevelNumber[0] == "1") {
 				document.location.href = "index_FTApp_MFL1.html";
@@ -783,7 +784,7 @@ function currentLevelDes () {
 				document.location.href = "index_FTApp_MSize6.html";
 			}			
 		}	
-		if (carriedDFValue = "Transitional") {
+		if (carriedDFValue = "Transitional" && carriedUI6 != null) {
 			var TlevelNumber = carriedUI6.match(/\d+/);
 			if (TlevelNumber[0] == "5") {
 				document.location.href = "index_FTApp_MSize.html";
@@ -813,7 +814,7 @@ function currentLevelDes () {
 				document.location.href = "index_FTApp_MFSP7.html";
 			}			
 		}	
-		if (carriedDFValue == "Transitional") {
+		if (carriedDFValue == "Transitional" carriedUI6 != null) {
 			var TlevelNumber = carriedUI6.match(/\d+/); /* assuming carriedUI6 is cleared from before*/
 			if (TlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MFP4.html";	
@@ -894,7 +895,7 @@ function currentLevelDes () {
 				document.location.href = "index_FTApp_MFD.html";	
 			}	
  		}				
-		if (carriedDFValue == "Transitional"){
+		if (carriedDFValue == "Transitional" carriedUI6 != null){
 			var TlevelNumber = carriedUI6.match(/\d+/);
 			if (TlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MFD3.html";	
