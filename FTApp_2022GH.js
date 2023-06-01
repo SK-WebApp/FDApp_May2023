@@ -293,29 +293,22 @@ var ModComContainer = document.getElementById("mod-comment");
 // 		if (carriedDFValue == "Food" || carriedDFValue == "Drink") {
 			var carriedUI4a = localStorage.removeItem('storedUI4a');
 			alert (carriedUI4a)
-			console.log(carriedUI4a)
 			var carriedUI4b = localStorage.removeItem('storedUI4b');
 			alert (carriedUI4a)
-			console.log(carriedUI4b)
 			var carriedUI5 = localStorage.removeItem('storedUI5');
 			alert (carriedUI5)
-			console.log(carriedUI5)
 			var carriedUI6 = localStorage.removeItem('storedUI6');
 			alert (carriedUI6)
-			console.log(carriedUI6)	
+// 			console.log(carriedUI6)	
 // 		}		
 	}
 	
 	function clearAllstored() {
-		var carriedUI1 = localStorage.getItem('storedUI1');
-		var carriedUI2 = localStorage.getItem('storedUI2');
-		var carriedUI3 = localStorage.getItem('storedUI3');
-		var carriedUI4a = localStorage.getItem('storedUI4a');
-		var carriedUI4b = localStorage.getItem('storedUI4b');
-		var carriedUI5 = localStorage.getItem('storedUI5');
-		var carriedUI6 = localStorage.getItem('storedUI6');
-
-		localStorage.clear();		
+		var carriedUI1 = localStorage.removeItem('storedUI1');
+		var carriedUI2 = localStorage.removeItem('storedUI2');
+		var carriedUI3 = localStorage.removeItem('storedUI3');
+		clearCarried();
+// 		localStorage.clear();	/* this cleared all the stored values, could be a problem */
 	}
 
 
@@ -349,18 +342,22 @@ It names the value as the current newValue and stores it as the carriedValue */
 		var levelValue = document.getElementById(currentLevel).value;
 			newValue = levelValue;
 			localStorage.setItem('newValue',levelValue);
+			alert (newValue)
 
 		if (levelValue == "Drink" || levelValue == "drink") {
 			DFValue = levelValue;
 			localStorage.setItem('DFValue',levelValue);
+			alert (DFValue)
 			}		
  		if (levelValue == "Food" || levelValue == "food") {
  			DFValue = levelValue;
 			localStorage.setItem('DFValue',levelValue);
+			alert (DFValue)
  			}	
  		if (levelValue == "Transitional"){
  			DFValue = levelValue;
  			localStorage.setItem('DFValue',levelValue);
+ 			alert (DFValue)
  			}			
 	}
 
@@ -781,7 +778,7 @@ function currentLevelDes () {
 		var FlevelNumber = carriedUI3.match(/\d+/); /* assuming carriedUI is cleared */
 		
 		if (carriedDFValue == "Food") {
-			alert ("MSize-Food")
+			alert ("M size-Food")
 			if (FlevelNumber[0] == "5") {
 				document.location.href = "index_FTApp_MSize.html";
 			}	
@@ -790,7 +787,7 @@ function currentLevelDes () {
 			}			
 		}	
 		if (carriedDFValue = "Transitional" && carriedUI6 != null) {
-			alert ("MSize-Transitional")
+			alert ("M size-Transitional")
 			var TlevelNumber = carriedUI6.match(/\d+/);
 			if (TlevelNumber[0] == "5") {
 				document.location.href = "index_FTApp_MSize.html";
