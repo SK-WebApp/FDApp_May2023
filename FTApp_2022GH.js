@@ -289,16 +289,11 @@ var ModComContainer = document.getElementById("mod-comment");
 /* Following two functions, clear selected or all carried variables */
 
 	function clearCarried() { 
-		alert ("should clear carriedUI4a, 4b, 5 and 6")
 // 		if (carriedDFValue == "Food" || carriedDFValue == "Drink") {
 			var carriedUI4a = localStorage.removeItem('storedUI4a');
-			alert (carriedUI4a)
 			var carriedUI4b = localStorage.removeItem('storedUI4b');
-			alert (carriedUI4a)
 			var carriedUI5 = localStorage.removeItem('storedUI5');
-			alert (carriedUI5)
 			var carriedUI6 = localStorage.removeItem('storedUI6');
-			alert (carriedUI6)
 // 			console.log(carriedUI6)	
 // 		}		
 	}
@@ -342,22 +337,18 @@ It names the value as the current newValue and stores it as the carriedValue */
 		var levelValue = document.getElementById(currentLevel).value;
 			newValue = levelValue;
 			localStorage.setItem('newValue',levelValue);
-			alert (newValue)
 
 		if (levelValue == "Drink" || levelValue == "drink") {
 			DFValue = levelValue;
 			localStorage.setItem('DFValue',levelValue);
-			alert (DFValue)
 			}		
  		if (levelValue == "Food" || levelValue == "food") {
  			DFValue = levelValue;
 			localStorage.setItem('DFValue',levelValue);
-			alert (DFValue)
  			}	
  		if (levelValue == "Transitional"){
  			DFValue = levelValue;
  			localStorage.setItem('DFValue',levelValue);
- 			alert (DFValue)
  			}			
 	}
 
@@ -778,7 +769,7 @@ function currentLevelDes () {
 		var FlevelNumber = carriedUI3.match(/\d+/); /* assuming carriedUI is cleared */
 		
 		if (carriedDFValue == "Food") {
-			alert ("M size-Food")
+// 			alert ("M size-Food")
 			if (FlevelNumber[0] == "5") {
 				document.location.href = "index_FTApp_MSize.html";
 			}	
@@ -787,7 +778,7 @@ function currentLevelDes () {
 			}			
 		}	
 		if (carriedDFValue = "Transitional" && carriedUI6 != null) {
-			alert ("M size-Transitional")
+// 			alert ("M size-Transitional")
 			var TlevelNumber = carriedUI6.match(/\d+/);
 			if (TlevelNumber[0] == "5") {
 				document.location.href = "index_FTApp_MSize.html";
@@ -804,7 +795,7 @@ function currentLevelDes () {
 		var FlevelNumber = carriedUI3.match(/\d+/);
 
 		if (carriedDFValue == "Food") {
-			alert ("ForkPress-Food")
+// 			alert ("ForkPress-Food")
 			if (FlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MFP4.html";	
 			}
@@ -819,7 +810,7 @@ function currentLevelDes () {
 			}			
 		}	
 		if (carriedDFValue == "Transitional" && carriedUI6 != null) {
-			alert ("ForkPress-Transitional")
+// 			alert ("ForkPress-Transitional")
 			var TlevelNumber = carriedUI6.match(/\d+/); /* assuming carriedUI6 is cleared from before*/
 			if (TlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MFP4.html";	
@@ -842,13 +833,13 @@ function currentLevelDes () {
 		var FlevelNumber = carriedUI3.match(/\d+/);
 
 		if (carriedDFValue == "Drink" && carriedUI2 != "Do Not Know") {
-			alert ("SpoonTilt- Drink")
+// 			alert ("SpoonTilt- Drink")
 			if (DlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MST4.html";	
 			}		
 		}		
 		if (carriedDFValue == "Food" && carriedUI3 != "Do Not Know") {
-			alert ("SpoonTilt - Food")
+// 			alert ("SpoonTilt - Food")
 			if (FlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MST3.html";	
 			}
@@ -862,14 +853,14 @@ function currentLevelDes () {
 		
 		if (carriedDFValue == "Transitional" && carriedUI5 == "drink") {
 			var TlevelNumber = carriedUI6.match(/\d+/);
-			alert ("SpoonTilt-Transitional-drink")
+// 			alert ("SpoonTilt-Transitional-drink")
 			if (TlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MST4.html";	
 			}				 
 		}
 		if (carriedDFValue == "Transitional" && carriedUI5 == "food") {	
 			var TlevelNumber = carriedUI6.match(/\d+/); 
-			alert ("SpoonTilt-Transitional-food")
+// 			alert ("SpoonTilt-Transitional-food")
 			if (TlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MST3.html";	
 			}			
@@ -888,13 +879,13 @@ function currentLevelDes () {
 		var FlevelNumber = carriedUI3.match(/\d+/);	
 	
  		if (carriedDFValue == "Drink" && carriedUI2 != "Do Not Know"){
- 			alert ("ForkDrip-Drink")
+//  			alert ("ForkDrip-Drink")
 			if (DlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MFD.html";	
 			}
  		}
  		if (carriedDFValue == "Food" && carriedUI3 != "Do Not Know"){
- 			alert ("ForkDrip-Food")
+//  			alert ("ForkDrip-Food")
 			if (FlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MFD3.html";	
 			}			
@@ -903,7 +894,7 @@ function currentLevelDes () {
 			}	
  		}				
 		if (carriedDFValue == "Transitional" && carriedUI6 != null){
- 			alert ("ForkDrip-Transitional")
+//  			alert ("ForkDrip-Transitional")
 			var TlevelNumber = carriedUI6.match(/\d+/);
 			if (TlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MFD3.html";	
@@ -1186,7 +1177,7 @@ function currentLevelDes () {
 
 		if (currentLevel == "level1" && newValue == "Transitional") {
 			htmlString += '<p>' + "Reminder - Transitional foods require higher level swallowing skills. It is very important to consult your Speech-Language Pathologist directly regarding consumption of these types of food. <br> You will need skill levels equivalent to managing either <u>IDDSI Level 0, Thin (like water)</u> for Drinks or <u>IDDSI Level 7, Regular (no modifications needed)</u> for Foods." +'</p>';
-			htmlString += '<p>' + "If your recommended Drink and Food IDDSI Levels do not match Level 0 Thin and Level 7 Regular, then it is highly recommended that you explore modification techniques by clicking on the button below." +'</p>';
+			htmlString += '<p>' + "If your recommended Drink and Food IDDSI Levels do not match Level 0 Thin and Level 7 Regular, then it is highly recommended that you explore modification techniques by clicking on the button below to change item texture to the correct IDDSI levels." +'</p>';
 			displayMod();
 			}	
 
