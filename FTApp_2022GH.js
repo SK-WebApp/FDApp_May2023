@@ -887,10 +887,10 @@ function currentLevelDes () {
 			}
  		}
  		if (carriedDFValue == "Food" && carriedUI3 != "Do Not Know"){
-			if (FlevelNumber[0] == "3" || TlevelNumber[0] == "3") {
+			if (FlevelNumber[0] == "3") {
 				document.location.href = "index_FTApp_MFD3.html";	
 			}			
-			if (FlevelNumber[0] == "4" || TlevelNumber[0] == "4") {
+			if (FlevelNumber[0] == "4") {
 				document.location.href = "index_FTApp_MFD.html";	
 			}	
  		}				
